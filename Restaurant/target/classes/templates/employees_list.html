@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employees List</title>
+    <link rel="stylesheet" th:href="@{styles/employees.css}">
+</head>
+<body>
+<div class="menu">
+    <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+            <ion-icon name="grid-outline"></ion-icon>
+        </label>
+
+        <label class="logo">FoodLover</label>
+
+        <ul>
+            <li><a th:href="@{/}" class="active">Home</a></li>
+            <li><a th:href="@{/orders}">Orders</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a th:href="@{employees_list.html}">Employees</a></li>
+            <li><a href="#app">Download App</a></li>
+        </ul>
+
+    </nav>
+</div>
+
+<h1>Employees</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Salary</th>
+        <th>Hire Date</th>
+        <th>Job Id</th>
+        <th>Department Id</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Thymeleaf loop to render employees -->
+    <tr th:each="employee : ${employees}">
+        <td th:text="${employee.employeeId}">ID</td>
+        <td th:text="${employee.employeeName}">Name</td>
+        <td th:text="${employee.employeeSurname}">Surname</td>
+        <td th:text="${employee.salary}">Salary</td>
+        <td th:text="${employee.hireDate}">Hire Date</td>
+        <td th:text="${employee.jobId}">Job Id</td>
+        <td th:text="${employee.departmentId}">Department Id</td>
+    </tr>
+    </tbody>
+
+    <a th:href="@{createEmployee}" class="floating-button">Create Employee</a>
+
+</table>
+</body>
+</html>

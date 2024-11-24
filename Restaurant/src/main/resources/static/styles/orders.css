@@ -1,0 +1,150 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #fff5f2;
+    box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.22);
+    z-index: 22;
+}
+
+label.logo {
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 30px;
+    font-weight: 700;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    font-size: 18px;
+    padding: 7px 13px;
+    text-decoration: none;
+    color: var(--clr-secondary);
+}
+
+.menu a.active,
+.menu a:hover {
+    border-bottom: 2px solid var(--clr-primary);
+    transition: 0.3s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    color: #333;
+}
+
+.order-table thead {
+    background-color: #3498db;
+    color: white;
+    font-weight: 500;
+}
+
+.order-table th, .order-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.order-table tbody tr:nth-child(odd) {
+    background-color: #ecf3f9;
+}
+
+.order-table tbody tr:nth-child(even) {
+    background-color: #f9fbfd;
+}
+
+.order-table tbody tr:hover {
+    background-color: #d6eaff;
+    cursor: pointer;
+}
+
+.order-table th {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+}
+
+.order-table td {
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.order-table tbody td:first-child {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+/* Кнопка в последней колонке */
+.action-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #217dbb;
+}
+
+.order-table td:last-child:empty {
+    background-color: transparent;
+    border: none;
+}
+

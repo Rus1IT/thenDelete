@@ -1,0 +1,163 @@
+/* Общие стили */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Стили для контейнера */
+.container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #fff5f2;
+    box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.22);
+    z-index: 22;
+    margin-bottom: 30px;
+}
+
+label.logo {
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 30px;
+    font-weight: 700;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    font-size: 18px;
+    padding: 7px 13px;
+    text-decoration: none;
+    color: var(--clr-secondary);
+}
+
+.menu a.active,
+.menu a:hover {
+    border-bottom: 2px solid var(--clr-primary);
+    transition: 0.3s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+/* Стили для таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 767px) {
+    table, th, td {
+        width: 100%;
+        display: block;
+    }
+
+    th {
+        background-color: #333;
+        color: white;
+    }
+
+    tr {
+        margin-bottom: 10px;
+    }
+
+    td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+    }
+
+    td[data-label="Employee ID"]::before { content: "Employee ID"; }
+    td[data-label="Name"]::before { content: "Name"; }
+    td[data-label="Surname"]::before { content: "Surname"; }
+    td[data-label="Salary"]::before { content: "Salary"; }
+    td[data-label="Hire Date"]::before { content: "Hire Date"; }
+    td[data-label="Job Id"]::before { content: "Job Id"; }
+    td[data-label="Department Id"]::before { content: "Department Id"; }
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.floating-button:hover {
+    background-color: #45a049;
+}
+

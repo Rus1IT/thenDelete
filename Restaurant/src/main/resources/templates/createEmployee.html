@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add New Employee</title>
+    <link rel="stylesheet" th:href="@{styles/createEmployee.css}">
+</head>
+<body>
+<div class="form-container">
+    <h1>Add New Employee</h1>
+    <form th:action="@{/createEmployee}" method="post">
+        <label for="employeeName">Name:</label>
+        <input type="text" id="employeeName" name="employeeName" required>
+
+        <label for="employeeSurname">Surname:</label>
+        <input type="text" id="employeeSurname" name="employeeSurname" required>
+
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" required>
+
+        <label for="hireDate">Hire Date:</label>
+        <input type="date" id="hireDate" name="hireDate" required>
+
+        <label for="jobName">Job Name:</label>
+        <select id="jobName" name="jobName" required>
+            <option value="" disabled selected>Select Job</option>
+            <option th:each="job : ${jobs}" th:value="${job.jobName}" th:text="${job.jobName}"></option>
+        </select>
+        <label for="departmentName">Department Name:</label>
+        <select id="departmentName" name="departmentName" required>
+            <option value="" disabled selected>Select Department</option>
+            <option th:each="department : ${departments}" th:value="${department.departmentName}" th:text="${department.departmentName}"></option>
+        </select>
+
+        <button type="submit">Add Employee</button>
+    </form>
+</div>
+</body>
+</html>
